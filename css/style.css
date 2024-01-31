@@ -41,6 +41,10 @@ header a:last-child {
 }
 
 /* 메인페이지 시작*/
+
+.main-page {
+  height: 100vh;
+}
 #sound-onoff {
   padding-right: 20px;
   display: flex;
@@ -79,7 +83,7 @@ header a:last-child {
   display: flex;
   justify-content: center;
   margin-right: 140px;
-}
+} 
 .main-title2 {
   font-size: 50px;
   display: flex;
@@ -94,9 +98,10 @@ header a:last-child {
   .main-title2 {
     font-size: 45px;
   }
-  .img-box img {
+  .img-box img{
     width: 300px;
   }
+ 
 }
 #main-img {
   display: block;
