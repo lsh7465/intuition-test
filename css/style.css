@@ -85,7 +85,7 @@ header a:last-child {
   float: right;
   margin-right: 100px;
 }
-@media all and (min-width: 360px) and (max-width: 768px) {
+@media all and (min-width: 370px) and (max-width: 768px) {
   .main-title1 {
     font-size: 40px;
     margin-top: 20px;
