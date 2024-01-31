@@ -89,7 +89,7 @@ header a:last-child {
   justify-content: center;
   margin-left: 100px;
 }
-@media all and (max-width: 380px) {
+@media all and (max-width: 500px) {
   .main-title1 {
     margin-right: 120px;
     font-size: 45px;
