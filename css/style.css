@@ -35,12 +35,13 @@ header a img {
 header a:last-child {
   font-size: 20px;
   font-weight: 700;
-  width: 85%;
+  width: 80%;
   text-align: center;
   display: inline;
 }
 
 /* 메인페이지 시작*/
+
 .main-page {
   height: 100vh;
 }
@@ -73,10 +74,27 @@ header a:last-child {
 #sound-off:active {
   box-shadow: none;
 }
-main h1 {
+.main-title1 {
   font-size: 50px;
   margin-top: 20px;
-  margin-left: 106px;
+  margin-left: 110px;
+}
+.main-title2 {
+  max-width: 300px;
+  font-size: 50px;
+  float: right;
+  margin-right: 100px;
+}
+@media all and (min-width: 321px) and (max-width: 768px) {
+  .main-title1,
+  .main-title2 {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-left: 110px;
+  }
+  #img-box img {
+    width: 280px;
+  }
 }
 #main-img {
   display: block;
