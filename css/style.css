@@ -83,14 +83,14 @@ header a:last-child {
   display: flex;
   justify-content: center;
   margin-right: 140px;
-}
+} 
 .main-title2 {
   font-size: 50px;
   display: flex;
   justify-content: center;
   margin-left: 100px;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 380px) {
   .main-title1 {
     margin-right: 120px;
     font-size: 45px;
@@ -98,6 +98,10 @@ header a:last-child {
   .main-title2 {
     font-size: 45px;
   }
+  .img-box > img{
+    width: 300px;
+  }
+ 
 }
 #main-img {
   display: block;
