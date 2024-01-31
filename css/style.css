@@ -74,7 +74,7 @@ header a:last-child {
 #sound-off:active {
   box-shadow: none;
 }
-#main-title{
+#main-title {
   flex-wrap: wrap;
 }
 .main-title1 {
@@ -90,14 +90,14 @@ header a:last-child {
   justify-content: center;
   margin-left: 100px;
 }
-@media all and (max-width: 360px) {
+@media all and (max-width: 370px) {
   .main-title1 {
-  margin-right: 120px;
-  font-size: 45px;
+    margin-right: 120px;
+    font-size: 45px;
   }
   .main-title2 {
     font-size: 45px;
-}
+  }
 }
 #main-img {
   display: block;
