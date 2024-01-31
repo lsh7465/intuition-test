@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>직관력 테스트</title>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/qna.css">
+  <link rel="stylesheet" href="css/animaition.css">
+</head>
+<body>
+  
+  <div class="container">
+    <header>
+      <a href="#">
+        <img src="asset/img/oz_icon.png" alt="오즈코딩스쿨">
+      </a>
+      <a href="index.html">
+        <span>OZ 코딩스쿨</span>
+      </a>
+    </header>
+    
+    <div class="main-page">
+      <main>
+        <div id="sound-onoff">
+          <img id="sound-on" src="asset/img/on.png" style="display: none;">
+          <img id="sound-off" src="asset/img/off.png" style="display: inline-block;">
+        </div>
+        <audio src="asset/audio/bgm.mp3" id="my-audio"></audio>
+        <h1 data-aos="fade-down" data-aos-duration="1000">당신의<span style="color:#c1a986;">
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;직관력</span>은?</h1>
+        <img data-aos="fade-up" data-aos-duration="1000"src="asset/img/mainpage01.png" id="main-img" alt="메인캐릭터 이미지">
+        <button id="start-btn" onclick="js:begin()">테스트 시작하기</button>
+        <p id="notice">※직감을 믿고 3초안에 답을 선택하셔야 합니다.</p>
+      </main>
+    </div>
+
+
+
+    <!-- 질문 페이지 -->
+  <div class="question-page">
+    <main>
+      <div class="progress">
+        <div class="progressBar">
+        </div>
+      </div>
+      <div class="count-down"></div>
+      <p class="step-number"></p>
+
+      <div class="img-box">
+
+      </div>
+
+      <div id="question-text">
+        
+      </div>
+      <div class="answer-buttons">
+
+      </div>
+    </main>
+  </div>
+  <div class="loading-page">
+    <img src="asset/img/loading01.png" alt="로딩이미지" 
+    id="loading-img">
+    <p id="loading-text">위잉 직관력 계산중 위잉...</p>
+  </div>
+
+
+
+
+    <!-- 결과 출력 페이지 -->
+    <div class="result-page" id="result-page">
+      <main>
+        <img src="images/result1.png" alt="결과 이미지" id="result-img">
+        <div class="result-text">
+          <p>두둥!</p>
+          <p>당신의 직관력은</p>
+          <p id="result-score"></p>
+          <p id="result-text"></p>
+        </div>
+
+
+      <button id="check-correct">정답 확인하기</button>
+      
+      <div class="correct-modal-bg" id="correct-modal-bg" style="display: none;"></div>
+      <div class="corret-modal" id="correct-modal" style="display: none;">
+        <span id="close-modal">X</span>
+        <div class="correct">
+          <span>1번</span>
+          <p>삶은 계란 입니다.</p>
+          <img src="asset/quiz_images/correct_egg.png" alt="삶은계란">
+        </div>
+        <div class="correct">
+          <span>2번</span>
+          <p>プール의 뜻은 풀입니다.</p>
+          <img src="asset/quiz_images/japan.png" alt="풀">
+        </div>
+        <div class="correct">
+          <span>3번</span>
+          <p>말의 털은 3번입니다.</p>
+          <img src="asset/quiz_images/correct_hourse.png" alt="말">
+        </div>
+        <div class="correct">
+          <span>4번</span>
+          <p>브라질(이과수 폭포)입니다.</p>
+          <img src="asset/quiz_images/brazil.png" alt="이과수폭포">
+        </div>
+        <div class="correct">
+          <span>5번</span>
+          <p>촛불색깔은 빨간색입니다.</p>
+          <img src="asset/quiz_images/correct_candle.png" alt="빨간 촛불색깔">
+        </div>
+        <div class="correct">
+          <span>6번</span>
+          <p>로고는 오른쪽입니다.</p>
+          <img src="asset/quiz_images/correct_brand_logo.png" alt="도미노피자">
+        </div>
+        <div class="correct">
+          <span>7번</span>
+          <p>사진 속 장소는 경주(불국사)입니다.</p>
+          <img src="asset/quiz_images/ Gyeongju.png" alt="불국사">
+        </div>
+        <div class="correct">
+          <span>8번</span>
+          <p>1번 시계입니다.</p>
+          <img src="asset/quiz_images/correct_watch.png" alt="시계">
+        </div>
+        <div class="correct">
+          <span>9번</span>
+          <p>입술이 거꾸로 돌아가 있습니다.</p>
+          <img src="asset/quiz_images/correct_woman.png" alt="입술">
+        </div>
+        <div class="correct">
+          <span>10번</span>
+          <p>'빈털터리'가 맞는 맞춤법입니다.</p>
+          <img src="asset/quiz_images/correct_word.png" alt="빈털터리">
+        </div>
+      </div>
+
+      <a href="#" id="reset-button">다시하기</a>
+      <div class="oz-coding">
+        <p>본 심리테스트는 오즈 코딩스쿨<br> <b>웹 개발 초격차 캠프 프론트엔드2기</b>
+          <br>이승현, 최민수팀이 <b>4일만에 구현한 결과물</b>입니다.</p>
+        <a href="https://ozcodingschool.com" 
+        id="oz-coding-button"
+        target="_blank"
+        >오즈코딩스쿨 알아보기 <i class="fa-solid fa-angle-right"></i></a>
+      </div>
+      
+      <p id="share-test">테스트 공유하기</p>
+      <ul id="social-icons">
+        <li><a href="#"><img src="asset/img/link03.png" alt="링크공유" id="share-img"></a></li>
+        <li><a href="#"><img src="asset/img/facebook.png" alt="페이스북 공유" id="facebook-img"></a></li>
+      </ul>
+    </main>
+  </div>
+
+</div>
+
+</div>
+ <script>AOS.init();</script>
+  <script src="js/sound.js"></script>
+  <script src="js/start.js"></script>
+  <script src="js/correct_modal.js"></script>
+  <script src="js/copy-link-facebook.js"></script>
+  <script src="js/copy-link.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* 질문 페이지 시작 */
+.question-page {
+  display: none;
+  text-align: center;
+  height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.progress-bar {
+  width: 78%;
+  height: 19px;
+  background-color: #f3ece6;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.progress {
+  height: 20px;
+  width: 80%;
+  background-color: #f3ede6;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+.progressBar {
+  height: 100%;
+  border-radius: 20px;
+  background-color: #3d5896;
+}
+.count-down {
+  font-size: 40px;
+  font-weight: bold;
+  color: red;
+  margin-top: 20px;
+  margin-right: 60px;
+  display: flex;
+  justify-content: flex-end;
+}
+.step-number {
+  margin: 25px 0 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+#question-img {
+  max-width: 500px;
+  height: 371px;
+  margin-bottom: 24px;
+}
+#question-text {
+  font-size: 18px;
+  font-weight: 500;
+  width: 73%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+button {
+  color: #fff;
+  background-color: #3d5896;
+  border: none;
+  transition: all 0.1s;
+  cursor: pointer;
+  width: 115px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 15px;
+}
+button:hover {
+  scale: 1.03;
+}
+button:active {
+  scale: 1;
+}
+.answer-buttons {
+  margin: 60px auto 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 78%;
+  gap: 30px;
+}
